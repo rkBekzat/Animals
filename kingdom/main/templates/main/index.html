@@ -7,7 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-<body>
-
+<body class="container">
+    {% if animal.count > 0%}
+        <h2>Animals</h2>
+    <table>
+        <tr><th>Id</th><th>Title</th> <th>Bio</th> <th>Firstname</th> <th>Lastname</th></tr>
+        {% for anm in animal %}
+        <tr><td>{{anm.id}}</td><td>{{anm.title}}</td> <td>{{anm.bio}}</td> <td>{{anm.firstname}}</td> <td>{{anm.lastname}}</td></tr>
+        {% endfor %}
+    </table>
+    {% endif%}
+    <a href="{% url 'create' %}"> Add animal</a>
 </body>
 </html>

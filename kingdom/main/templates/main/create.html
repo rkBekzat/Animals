@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="create/", method="POST">
+        {% csrf_token %}
+        <p>
+            <label>Enter the title</label><br>
+            <input name="title", type="text">
+        </p>
+        <p>
+            <label>Enter the bio</label><br>
+            <input name="Bio", type="text">
+        </p>
+        <p>
+            <label>Enter the firstname</label><br>
+            <input name="first name", type="text">
+        </p>
+        <p>
+            <label>Enter the lastname</label><br>
+            <input name="last name", type="text">
+        </p>
+        <input type="submit" value="save">
+    </form>
+</body>
+</html>
