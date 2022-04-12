@@ -21,12 +21,12 @@
     </div>
 
     <div class="features">
-        <h1>{{animal.title}}</h1>
-        <img src={{animal.avatar}} alt={{animal.title}}>
-        <h5>{{animal.firstname}} {{animal.lastname}}</h5>
-        <p>{{animal.bio}}</p>
-        <a href="{% url 'delete' animal.id  %}" class="btn btn-danger">Delete</a>
-        <a href="{% url 'update' animal.id  %}" class="btn btn-info">Edit</a>
+        <h1 style = "margin-left: 10%; margin-right: 10%">{{animal.title}}</h1>
+        <img style = "margin-left: 10%; margin-right: 10%" src={{animal.avatar}} alt={{animal.title}}>
+        <h5 style = "margin-left: 10%; margin-right: 10%">{{animal.firstname}} {{animal.lastname}}</h5>
+        <p style = "margin-left: 10%; margin-right: 10%">{{animal.bio}}</p>
+        <a style = "margin-left: 10%;" href="{% url 'delete' animal.id  %}" class="btn btn-danger">Delete</a>
+        <a  style = " margin-right: 10%" href="{% url 'update' animal.id  %}" class="btn btn-info">Edit</a>
     </div>
 </body>
 </html>
