@@ -22,37 +22,15 @@
     </div>
 
 
-    <form action="create/", method="POST">
+    <form method="post">
         {% csrf_token %}
-        <p>
-            <label>Enter the title</label><br>
-            <input name="title", type="text">
-        </p>
-        <p>
-            <label>Enter the bio</label><br>
-            <input name="Bio", type="text">
-        </p>
-        <p>
-            <label>Enter the firstname</label><br>
-            <input name="first name", type="text">
-        </p>
-        <p>
-            <label>Enter the lastname</label><br>
-            <input name="last name", type="text">
-        </p>
-        <input type="submit" value="save">
+        {{form.avatar}} <br>
+        {{form.bio}} <br>
+        {{form.firstname}} <br>
+        {{form.lastname}} <br>
+        {{form.title}}
+        <button class="btn btn-success" type="submit"> add animal</button>
     </form>
 
-
-<!--    {% if animal.count > 0%}-->
-<!--        <h2>Animals</h2>-->
-<!--    <table>-->
-<!--        <tr><th>Id</th><th>Title</th> <th>Bio</th> <th>Firstname</th> <th>Lastname</th></tr>-->
-<!--        {% for anm in animal %}-->
-<!--        <tr><td>{{anm.id}}</td><td>{{anm.title}}</td> <td>{{anm.bio}}</td> <td>{{anm.firstname}}</td> <td>{{anm.lastname}}</td></tr>-->
-<!--        {% endfor %}-->
-<!--    </table>-->
-<!--    {% endif%}-->
-<!--    <a href="{% url 'create' %}"> Add animal</a>-->
 </body>
 </html>
