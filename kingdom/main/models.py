@@ -6,3 +6,6 @@ class Animal(models.Model):
     firstname = models.CharField("First name", max_length=30)
     lastname = models.CharField("Last name", max_length=30)
     title = models.CharField(max_length=30)
+
+    def get_absolute_url(self):
+        return f'/{self.id}'

@@ -20,16 +20,13 @@
       </nav>
     </div>
 
-
-    <form method="post">
-        {% csrf_token %}
-        {{form.avatar}} <br>
-        {{form.bio}} <br>
-        {{form.firstname}} <br>
-        {{form.lastname}} <br>
-        {{form.title}}
-        <button class="btn btn-success" type="submit"> add animal</button>
-    </form>
-
+    <div class="features">
+        <h1>{{animal.title}}</h1>
+        <img src={{animal.avatar}} alt={{animal.title}}>
+        <h5>{{animal.firstname}} {{animal.lastname}}</h5>
+        <p>{{animal.bio}}</p>
+        <a href="{% url 'delete' animal.id  %}" class="btn btn-danger">Delete</a>
+        <a href="{% url 'update' animal.id  %}" class="btn btn-info">Edit</a>
+    </div>
 </body>
 </html>

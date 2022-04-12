@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Deleting Animal</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
 </head>
 <body>
@@ -23,12 +23,7 @@
 
     <form method="post">
         {% csrf_token %}
-        {{form.avatar}} <br>
-        {{form.bio}} <br>
-        {{form.firstname}} <br>
-        {{form.lastname}} <br>
-        {{form.title}}
-        <button class="btn btn-success" type="submit"> add animal</button>
+        <button class="btn btn-success" type="submit"> delete animal</button>
     </form>
 
 </body>
